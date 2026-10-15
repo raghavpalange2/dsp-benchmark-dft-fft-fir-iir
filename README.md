@@ -1,57 +1,146 @@
-# dsp-benchmark-dft-fft-fir-iir
-Comparative DSP benchmark of DFT, FFT, FIR and IIR algorithms using MATLAB
+Comparative DSP Benchmark: DFT, FFT, FIR and IIR
 
-# Comparative DSP Benchmark: DFT, FFT, FIR and IIR
+A MATLAB-based Digital Signal Processing mini-project focused on the implementation, experimental benchmarking, and comparative analysis of DFT, FFT, convolution, FIR filters, and IIR filters.
 
-## Project Overview
+Project Overview
 
-This project compares fundamental Digital Signal Processing (DSP) algorithms through implementation and quantitative performance evaluation using MATLAB.
+Digital Signal Processing (DSP) is widely used in audio processing, communications, biomedical signal analysis, image processing, and embedded systems. The efficiency and accuracy of DSP algorithms are important when processing signals under different computational constraints.
 
-The project investigates the computational performance and signal-processing characteristics of the Discrete Fourier Transform (DFT), Fast Fourier Transform (FFT), Finite Impulse Response (FIR) filters, and Infinite Impulse Response (IIR) filters.
+This project investigates and compares selected DSP algorithms through MATLAB implementation and experimental evaluation. It examines their computational performance, numerical accuracy, and signal-processing characteristics using synthetic and, where applicable, real-world input signals.
 
-## Objectives
+The project aims to connect theoretical DSP concepts with practical implementation and quantitative performance analysis.
 
-- Implement and compare DFT and FFT algorithms.
-- Study and benchmark convolution methods.
-- Compare FIR and IIR filter characteristics.
-- Evaluate computational runtime, operation counts, frequency resolution, and numerical accuracy where applicable.
-- Analyze the experimental results using graphs and quantitative measurements.
+Objectives
 
-## Repository Structure
+- Implement and study the Discrete Fourier Transform (DFT) and Fast Fourier Transform (FFT).
+- Compare direct and FFT-based approaches to convolution.
+- Investigate the characteristics and performance of Finite Impulse Response (FIR) and Infinite Impulse Response (IIR) filters.
+- Measure and compare execution time and computational complexity.
+- Evaluate numerical accuracy using appropriate error metrics, including Root Mean Square Error (RMSE), where applicable.
+- Study frequency resolution and frequency-response characteristics.
+- Generate graphs and tables to support quantitative comparison.
+- Compare the implemented approaches with appropriate reference methods.
 
-- `src/` — MATLAB source code and helper functions.
-- `data/` — Input signals and datasets.
-- `results/figures/` — Generated plots and graphs.
-- `report/` — Final project report.
-- `presentation/` — Project presentation.
+Algorithms and Experiments
 
-## Software Requirements
+1. DFT and FFT Comparison
 
-- MATLAB
-- [Required MATLAB toolboxes, if applicable]
+The DFT transforms a discrete-time signal into its frequency-domain representation. The FFT is an efficient family of algorithms for computing the DFT.
 
-## How to Run
+The comparison considers:
 
-1. Download or clone this repository.
+- Execution time for different input lengths.
+- Computational complexity and operation-count estimates.
+- Numerical agreement between the computed frequency-domain results.
+- Frequency resolution for different signal lengths.
+
+2. Convolution Benchmark
+
+Convolution is a fundamental operation used in linear time-invariant systems and digital filtering.
+
+The project compares applicable convolution implementations, such as direct time-domain convolution and FFT-based convolution, in terms of:
+
+- Execution time.
+- Input signal lengths.
+- Numerical agreement between the output signals.
+- Computational efficiency.
+
+3. FIR and IIR Filter Comparison
+
+FIR and IIR filters are widely used to modify the frequency content of discrete-time signals.
+
+The comparison examines:
+
+- Filter frequency responses.
+- Time-domain output signals.
+- Computational requirements.
+- Numerical error against an appropriate reference implementation, where applicable.
+- Relevant differences in filter structure and behavior.
+
+4. Quantitative Performance Evaluation
+
+The experiments use appropriate performance measures, including:
+
+| Metric | Purpose |
+|---|---|
+| Execution time | Measures the time required to perform a computation. |
+| Operation count | Estimates computational work using the counting method defined in the implementation. |
+| RMSE | Measures the difference between an output and its reference signal. |
+| Frequency resolution | Describes the frequency spacing associated with the analysis length and sampling rate. |
+| Frequency response | Characterizes a filter's behavior across frequency. |
+
+The exact metrics used for each experiment depend on the implemented algorithm and available reference method. Execution-time measurements can vary with hardware, MATLAB version, input size, and measurement conditions.
+
+Tools and Technologies
+
+- Programming language: MATLAB
+- Environment:  MATLAB Online
+- Application area:Digital Signal Processing
+- Visualization: MATLAB plots and comparative graphs
+- Analysis: Numerical measurements, performance tables, and graphical comparisons
+
+Additional MATLAB toolboxes may be required depending on the functions used by the implementation.
+
+ How to Run the Project
+
+1. Download or clone this repository to your computer.
 2. Open MATLAB.
-3. Set the project directory as the current folder.
-4. Run the main benchmark script: `[actual main script name].m`.
-5. Review the generated results and figures.
+3. Set the repository directory as the current working folder.
+4. Navigate to the `src/` directory or add it and its required subdirectories to the MATLAB path.
+5. Open the main benchmark script and check that the required input data and helper functions are available.
+6. Run the main script or the individual experiment scripts as instructed in the source code.
+7. Review the generated figures, numerical results, and performance comparisons.
 
-Follow the instructions in the source files for any additional setup or required datasets.
+If an experiment requires a particular toolbox, dataset, or configuration, consult the relevant source file before running it.
 
-## Results
+Results and Analysis
 
-The project evaluates the selected DSP algorithms using experimental measurements and graphical comparisons. Refer to the final report and the `results/figures/` directory for the methodology, measurements, and analysis.
+The experimental results are documented through numerical measurements, graphs, and comparative analysis.
 
-## References
+The intended result categories include:
 
-Refer to the research papers, technical documentation, and other sources listed in the project report.
+- DFT versus FFT execution time.
+- Computational operation-count comparisons.
+- Frequency-resolution analysis.
+- Direct versus FFT-based convolution performance.
+- FIR and IIR frequency-response comparisons.
+- Time-domain filtering results.
+- Numerical accuracy and error analysis, where applicable.
 
-## Academic Project
+The measured values and conclusions should be taken from the actual MATLAB experiments and presented in the final project report.
 
-DSP Mini-Project  
-Project title: Comparative DSP Benchmark: DFT, FFT, FIR and IIR  
-Academic year: 2026–2027
+Project Deliverables
 
-**Note:** Update this README to reflect the actual files, algorithms, measurements, and MATLAB requirements in the final submission.
+The repository is intended to contain the following project materials:
+
+- Complete MATLAB source code.
+- Final project report.
+- Project presentation.
+
+References
+
+The theoretical background and experimental methodology should be supported by relevant research papers, textbooks, and technical documentation.
+
+The complete references used in the project are listed in the final report. Dataset sources and any third-party implementations should be acknowledged where applicable.
+
+Academic Information
+
+- Project title: Comparative DSP Benchmark: DFT, FFT, FIR and IIR
+- Project type: DSP Mini-Project
+- Department:Electronics and Communication Engineering
+- Academic year: 2026–2027
+- Implementation environment: MATLAB
+
+Author and Acknowledgements
+
+This project was developed as part of the academic coursework in Digital Signal Processing.
+
+Author: Raghav Bholeshwar Palange
+
+PRN: 1022512013
+
+Institution: DES Pune University, Pune
+
+Project guide: Dr. Hrishikesh Vanjari
+
+This repository is intended to support academic evaluation, verification of the implementation, and reproducibility of the documented experiments.
